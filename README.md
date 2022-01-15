@@ -1,2 +1,2 @@
 # CS_example
-a simple but concrete demonstration of compressed sensing
+a simple but concrete demonstration of compressed sensing with Python
