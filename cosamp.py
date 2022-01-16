@@ -14,7 +14,7 @@ def cosamp(phi, u, s, epsilon=1e-10, max_iter=1000):
     halt = False
     while not halt:
         it += 1
-        print("Iteration {}\r".format(it), end="")
+        print(f'Iteration {it}')
         
         y = np.dot(np.transpose(phi), v)
         omega = np.argsort(y)[-(2*s):] # large components
@@ -22,7 +22,7 @@ def cosamp(phi, u, s, epsilon=1e-10, max_iter=1000):
         phiT = phi[:, omega]
         b = np.zeros(phi.shape[1])
         # Solve Least Square
-        b[omega], _, _, _ = np.linalg.lstsq(phiT, u)
+        b[omega], _, _, _ = np.linalg.lstsq(phiT, u, rcond=None)
         
         # Get new estimate
         b[np.argsort(b)[:-s]] = 0
