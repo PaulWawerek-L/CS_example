@@ -7,5 +7,5 @@ dependencies:
 	- numpy=1.21.5
 	- matplotlib=3.5.1
 	- scipy=1.7.3
-pip:
-	- cosamp=0.0.2
+	- pip:
+		- cosamp==0.0.2
