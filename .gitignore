@@ -1,3 +1,5 @@
 *.png
-
+*.wav
+*.pdf
+.ipynb*
 __pycache__
